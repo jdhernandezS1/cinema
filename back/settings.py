@@ -12,9 +12,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv, find_dotenv
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# Load Auth0 application settings into memory
+AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
+AUTH0_CLIENT_ID = os.environ.get("AUTH0_CLIENT_ID")
+AUTH0_CLIENT_SECRET = os.environ.get("AUTH0_CLIENT_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,6 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
+
+    # LOCAL apps
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -59,11 +69,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'back.urls'
-
+DIRS = [
+    os.path.join(BASE_DIR, "webappexample", "templates"),
+    os.path.join(BASE_DIR, 'front/build'),
+    os.path.join(BASE_DIR, 'templates'),
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'front/build')],
+        'DIRS': DIRS,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
