@@ -1,0 +1,71 @@
+.moviesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.moviesCard {
+    list-style: none;
+    text-align: center;
+
+}
+
+.moviesImg {
+    height: fit-content;
+    border-radius: 3%;
+    width: 230px;
+}
+
+.moviesTitle {
+    color: #fdfde0;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px #cc3333, 0 0 5px #f90606;
+    font-size: 1rem;
+}
+
+.hvrBounceIn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvrBounceIn:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvrBounceIn:hover:before, .hvrBounceIn:focus:before, .hvrBounceIn:active:before {
+  -webkit-animation-name: hvrBounceIn;
+  animation-name: hvrBounceIn;
+}
+
+.hvrBounceIn:hover,
+.hvrBounceIn:focus,
+.hvrBounceIn:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+
+@media (max-width: 500px) {
+    .moviesGrid {
+        grid-template-columns: 100%;
+    }
+
+    .moviesImg {
+        width: 90%;
+    }
+}
