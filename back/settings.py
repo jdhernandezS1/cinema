@@ -63,7 +63,7 @@ ROOT_URLCONF = 'back.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'front/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -150,9 +150,9 @@ if USE_S3:
 else:
     STATIC_URL = 'static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    # STATICFILES_DIRS = [
-    #     os.path.join(BASE_DIR, 'game/build/static')
-    # ]
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'front/build/static')
+    ]
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 # Default primary key field type
