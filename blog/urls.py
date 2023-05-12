@@ -11,7 +11,7 @@ from . import views
 
 urlpatterns = [
     path(
-        "",
+        "auth0/",
         views.index,
         name="index"
         ),

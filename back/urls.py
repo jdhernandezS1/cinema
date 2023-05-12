@@ -23,10 +23,13 @@ urlpatterns = [
         admin.site.urls
         ),
     path(
-        '',
+        'react/',
         TemplateView.as_view(template_name='index.html')
         ),
     path(
         'auth0/',
         include('blog.urls')),
+    path(
+        '',
+        include('dashboard.urls')),
 ]
