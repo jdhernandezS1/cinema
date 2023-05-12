@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     # LOCAL apps
     'blog',
     'dashboard',
+    # React
+    'django_react_templatetags',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
 ]
 
 ROOT_URLCONF = 'back.urls'
@@ -86,6 +87,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
+                'django_react_templatetags.context_processors.react_context_processor',
             ],
         },
     },
@@ -169,7 +172,7 @@ else:
     STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'front/build/static')
+    os.path.join(BASE_DIR, 'static')
 ]
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
