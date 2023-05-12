@@ -1,8 +1,6 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
+{% include "xbase.html" %}
 {% load static %}
-
-{% block extra_css %}
-{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -13,7 +11,6 @@
 {% endblock %}
 
 {% block content %}
-{% react_render component="Component" props=my_data %}
 <div class="h-100 p-0 m-0">
 <h1>hello world</h1>
 </div>

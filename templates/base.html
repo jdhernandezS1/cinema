@@ -1,6 +1,4 @@
 {% load static %}
-{% load react %}
-
 <!doctype html>
 <html lang="en">
 
@@ -63,23 +61,22 @@
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
-  <!-- React Libraries -->
-  <script src="{% static 'plugins/react/react.development.js' %}"></script>
- <script src="{% static 'plugins/react/react-dom.development.js' %}"></script>
- <!-- JSX support-->
- <script src="{% static 'plugins/react/babel.min.js' %}"></script>
   {% endblock %}
 
   {% block extra_js %}
   {% endblock %}
 
-  <title>Title {% block extra_title %}{% endblock %}</title>
+  <title>
+    Title 
+    {% block extra_title %}
+
+    {% endblock %}
+  </title>
 </head>
 
 <body class="text-black w-100 h-100">
   <header class="container-fluid absolute-top p-0 m-0 bg-white w-100">
     <hr class="w-100 bg-one m-0 py-2">
-    {% include 'includes/nav_bar.html' %}
 
   </header>
   <div class="p-0 m-0 bg-white text-black">

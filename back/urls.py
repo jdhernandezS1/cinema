@@ -26,9 +26,9 @@ urlpatterns = [
         'react/',
         TemplateView.as_view(template_name='index.html')
         ),
-    path(
-        'auth0/',
-        include('blog.urls')),
+    # path(
+    #     'auth0/',
+    #     include('blog.urls')),
     path(
         '',
         include('dashboard.urls')),

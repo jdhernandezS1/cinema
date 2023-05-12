@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv, find_dotenv
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -51,12 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-
     # LOCAL apps
-    'blog',
+    # 'blog',
     'dashboard',
-    # React
-    'django_react_templatetags',
 ]
 
 MIDDLEWARE = [
@@ -72,8 +68,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'back.urls'
 DIRS = [
-    os.path.join(BASE_DIR, "webappexample", "templates"),
-    os.path.join(BASE_DIR, 'front/build'),
+    os.path.join(BASE_DIR, 'static/front/build'),
     os.path.join(BASE_DIR, 'templates'),
 ]
 TEMPLATES = [
@@ -88,7 +83,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.static',
-                'django_react_templatetags.context_processors.react_context_processor',
             ],
         },
     },
@@ -172,7 +166,8 @@ else:
     STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static/front/build/static'),
+    os.path.join(BASE_DIR, 'static/')
 ]
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')

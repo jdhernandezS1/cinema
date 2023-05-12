@@ -12,4 +12,4 @@ def index(request):
     """
     Dashboard page view
     """
-    return render(request, "dashboard/index.html")
+    return render(request, "dashboard/dashboard.html")
