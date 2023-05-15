@@ -9,7 +9,7 @@ export function NavBarPhone() {
 
   return (
 
-    <div className="menu">
+    <div className="">
       <div className="menu-container ">
         <span className={moviesTitle + " " + hvrBounceIn} >
           OmeCast
@@ -19,7 +19,7 @@ export function NavBarPhone() {
         </div>
         <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
 
-          <ul>
+          <ul className="menuPh">
             <DropDownItem name={"/"} text={'Home'} />
             <DropDownItem name={"/Blog/"} text={'Blog'} />
             <DropDownItem name={"/Movies/"} text={'Movies'} />
@@ -36,7 +36,6 @@ export function NavBarPhone() {
 function DropDownItem(props) {
   return (
     <li className="dropdownItem">
-
       <Link to={props.name} className="dropdownItem"> {props.text}</Link>
     </li>
   )

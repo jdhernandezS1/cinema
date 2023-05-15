@@ -39,7 +39,14 @@
     color: #da0000;
     cursor: pointer;
 }
+.menu{
+    font-size: 3rem;
+}
+.menuPh li{
+    list-style-type: disclosure-closed;
+    float: none;
 
+}
 .dropdownItem {
     text-decoration: none;
     color: #000000d3;

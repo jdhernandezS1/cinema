@@ -6,6 +6,7 @@ import {Home} from "../pages/Home";
 import NoPage from "../pages/404";
 import Layout from "../pages/Layout";
 import {GridMovies} from "../Component"
+import { MovieDet } from "../pages/videos/VideoDetails";
 
 export function TestBar() {
   return (
@@ -17,6 +18,7 @@ export function TestBar() {
           <Route path="About" element={<About />} />
           <Route path="Movies" element={<GridMovies />} />
           <Route path="*" element={<NoPage />} />
+          <Route exact path="Movies/video/:videoId" element={<MovieDet />} />
         </Route>
       </Routes>
     </BrowserRouter>

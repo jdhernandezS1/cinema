@@ -11,7 +11,7 @@ export function NavBarPc() {
     return (
         <>
             <nav className={navBarPc}>
-                <ul>
+                <ul className="menu">
                     <li>
                         <Link to="/" className={item}>
                             <span className={moviesTitle + " " + hvrBounceIn} >
