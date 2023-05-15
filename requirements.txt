@@ -1,5 +1,4 @@
 asgiref==3.6.0
-<<<<<<< HEAD
 boto3==1.26.133
 botocore==1.29.133
 dj-database-url==2.0.0
@@ -15,16 +14,3 @@ sqlparse==0.4.4
 typing_extensions==4.5.0
 urllib3==1.26.15
 whitenoise==6.4.0
-=======
-boto3==1.26.132
-botocore==1.29.132
-dj-database-url==2.0.0
-Django==4.2.1
-django-storages==1.13.2
-gunicorn==20.1.0
-jmespath==1.0.1
-mysqlclient==2.1.1
-psycopg2==2.9.6
-s3transfer==0.6.1
-sqlparse==0.4.4
->>>>>>> 08eac7e84ff39865865951765c04a1af9f41fba9
