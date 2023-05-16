@@ -41,6 +41,7 @@
 }
 .menu{
     font-size: 3rem;
+    margin:auto 0px;
 }
 .menuPh li{
     list-style-type: disclosure-closed;

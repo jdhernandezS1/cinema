@@ -27,6 +27,26 @@ urlpatterns = [
         TemplateView.as_view(template_name='index.html')
         ),
     path(
+        'Movies/',
+        TemplateView.as_view(template_name='index.html')
+        ),
+    path(
+        'Movies/video/<int>',
+        TemplateView.as_view(template_name='index.html')
+        ),
+    path(
+        'Blog/',
+        TemplateView.as_view(template_name='index.html')
+        ),
+    path(
+        'Home/',
+        TemplateView.as_view(template_name='index.html')
+        ),
+    path(
+        'About/',
+        TemplateView.as_view(template_name='index.html')
+        ),
+    path(
         'dash/',
         include('dashboard.urls')),
 ]

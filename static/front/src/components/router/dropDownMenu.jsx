@@ -20,10 +20,9 @@ export function NavBarPhone() {
         <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
 
           <ul className="menuPh">
-            <DropDownItem name={"/"} text={'Home'} />
             <DropDownItem name={"/Blog/"} text={'Blog'} />
             <DropDownItem name={"/Movies/"} text={'Movies'} />
-            <DropDownItem name={"/About/"} text={'About'} />
+            <DropDownItem name={"/About/"} text={'About Us'} />
           </ul>
 
         </div>

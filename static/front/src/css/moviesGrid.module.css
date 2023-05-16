@@ -39,10 +39,15 @@
 .moviesTitle {
     color: #fdfde0;
     text-align: center;
-    text-shadow: 1px 1px 2px black, 0 0 25px #cc3333, 0 0 5px #f90606;
-    font-size: 1rem;
+    text-shadow: 1px 1px 2px black, 0 0 25px #f10000, 0 0 5px #db0000;
+    margin: auto 0px;
 }
-
+.moviesTitle:hover .moviesTitle::after {
+    transform: scale(1.5);
+    transition: transform .2s; 
+    border-radius: 3%;
+    background-color: #fdfde0;
+}
 .hvrBounceIn {
   display: inline-block;
   vertical-align: middle;
