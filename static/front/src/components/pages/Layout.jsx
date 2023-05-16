@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { NavBarPhone } from "../router/dropDownMenu";
 import styles from "../../css/Header/nav.module.css";
 import { NavBarPc } from "../router/menuPc";
-
+import { Footer } from "./footer";
 
 const Layout = () => {
   return (
@@ -17,6 +17,7 @@ const Layout = () => {
         <NavBarPhone />
       </div>
       <Outlet />
+      <Footer/>
     </>
   )
 };
