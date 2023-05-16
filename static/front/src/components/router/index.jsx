@@ -19,6 +19,8 @@ export function TestBar() {
           <Route path="Movies" element={<GridMovies />} />
           <Route path="*" element={<NoPage />} />
           <Route exact path="Movies/video/:videoId" element={<MovieDet />} />
+          <Route exact path="video/:videoId" element={<MovieDet />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

@@ -4,7 +4,7 @@
     gap: 20px;
     padding: 10px;
     justify-content: center;
-    margin: 100px 0 
+    margin: 100px 0
 }
 
 .moviesCard {
@@ -12,75 +12,101 @@
     text-align: center;
 
 }
-.moviesCard:hover{
+
+.moviesCard:hover {
     transform: scale(1.3);
-    transition: transform .2s; 
+    transition: transform .2s;
     border-radius: 3%;
 }
-.moviesCardTitle{
-    text-align: center;    
+
+.moviesCardTitle {
+    text-align: center;
     display: flex;
     justify-content: center;
     background-color: #202020;
     border-radius: 50%;
     opacity: 0.8;
-    
+
 
 }
+
 .moviesImg {
     height: fit-content;
     border-radius: 3%;
     width: 230px;
 }
-.moviesImg:hover{
+
+.moviesImg:hover {
     border-radius: 10%;
 
 }
+
 .moviesTitle {
     color: #fdfde0;
     text-align: center;
     text-shadow: 1px 1px 2px black, 0 0 25px #f10000, 0 0 5px #db0000;
     margin: auto 0px;
 }
+
 .moviesTitle:hover .moviesTitle::after {
     transform: scale(1.5);
-    transition: transform .2s; 
+    transition: transform .2s;
     border-radius: 3%;
     background-color: #fdfde0;
 }
+
 .hvrBounceIn {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
 }
+
 .hvrBounceIn:before {
-  content: '';
-  position: absolute;
-  border: #e1e1e1 solid 4px;
-  top: -12px;
-  right: -12px;
-  bottom: -12px;
-  left: -12px;
-  opacity: 0;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+    content: '';
+    position: absolute;
+    border: #e1e1e1 solid 4px;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
 }
-.hvrBounceIn:hover:before, .hvrBounceIn:focus:before, .hvrBounceIn:active:before {
-  -webkit-animation-name: hvrBounceIn;
-  animation-name: hvrBounceIn;
+
+.hvrBounceIn:hover:before,
+.hvrBounceIn:focus:before,
+.hvrBounceIn:active:before {
+    -webkit-animation-name: hvrBounceIn;
+    animation-name: hvrBounceIn;
 }
 
 .hvrBounceIn:hover,
 .hvrBounceIn:focus,
 .hvrBounceIn:active {
     transform: scale(1.2);
-    transition: transform .2s; 
+    transition: transform .2s;
     border-radius: 3%;
 }
 
+.pagination {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.pagination button {
+    font-size: xx-large;
+    margin: 10px;
+    background-color: #202020;
+    color:#ffe2ac;
+}
+.pagination button:hover {
+    background-color: #ffe2ac;
+    color:#202020;
+}
 
 @media (max-width: 500px) {
     .moviesGrid {
