@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'storages',
     # LOCAL apps
     # 'blog',
+    'about',
     'dashboard',
 ]
 
@@ -105,7 +106,6 @@ DATABASES = {
         "OPTIONS": {
             'init_command': "SET sql_mode='STRICT_ALL_TABLES'",
             'charset': 'utf8mb4',
-            "autocommit": True,
             }},
     'default1': {
         'ENGINE': 'django.db.backends.sqlite3',

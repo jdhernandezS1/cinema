@@ -1,6 +1,12 @@
 import React from 'react'
+import { FormUs } from './about/Form'
 export function About() {
   return (
-    <div>About</div>
+    <div>About
+
+    {<FormUs/>
+    }
+    </div>
+
   )
 }
