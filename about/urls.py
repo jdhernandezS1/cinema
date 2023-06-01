@@ -12,7 +12,7 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path(
-        'About/',
+        'About',
         views.about.as_view(), 
         name='about'
         ),

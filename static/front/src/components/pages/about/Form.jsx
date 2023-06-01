@@ -1,12 +1,12 @@
 import React from "react";
-import CsrfCookieSetter from "../../../utils/csrfcookie";
+import CSRFToken from "../../../utils/djangoToken";
 
 export function FormUs() {
-
+    // const html = {% csrf_token %}
     return (
         <>
-            <form  method="post">
-                <CsrfCookieSetter />
+            <form method="post">
+                {<CSRFToken/>}
                 <label>
                     Name:
                     <input type="text" name="name" />

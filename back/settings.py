@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
+    'corsheaders',
     # LOCAL apps
     # 'blog',
     'about',
@@ -65,7 +66,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+#Cors Setting
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000','http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','http://127.0.0.1:8000']
 
 ROOT_URLCONF = 'back.urls'
 DIRS = [
