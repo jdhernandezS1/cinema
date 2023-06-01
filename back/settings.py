@@ -51,11 +51,22 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'storages',
     'corsheaders',
+    'rest_framework',
     # LOCAL apps
     # 'blog',
     'about',
     'dashboard',
 ]
+
+# Rest API
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

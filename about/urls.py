@@ -15,5 +15,8 @@ urlpatterns = [
         'About',
         views.about.as_view(), 
         name='about'
-        ),
+        )
+        ,
 ]
+
+
