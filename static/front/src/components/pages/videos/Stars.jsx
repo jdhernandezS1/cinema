@@ -2,7 +2,6 @@ import React from "react";
 import { IoIosStarOutline, IoIosStar } from "react-icons/io";
 
 
-// export function Stars() {
 export function Stars(number) {
     let num = number.number/2;
     console.log(num)

@@ -14,6 +14,7 @@ export function GridMovies() {
             setMovies(data.results);
         });
     }, []);
+
     // Paginate
     let itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
@@ -47,4 +48,4 @@ export function GridMovies() {
             </div>
         </>
     )
-}
+};

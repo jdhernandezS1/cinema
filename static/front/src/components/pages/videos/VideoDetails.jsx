@@ -1,10 +1,10 @@
 import React from "react";
-// import movie from "../movie.json";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { get } from "../../../utils/httpClient";
 import { Stars } from "./Stars";
 import styles from "../../../css/movies/movies.module.css";
+import { Comments } from "./Comments";
 
 export function MovieDet() {
     const { videoId } = useParams();
@@ -16,7 +16,7 @@ export function MovieDet() {
             setMovie(data);
         });
     }, [videoId]);
-    console.log(movie)
+    // console.log(movie)
     if (!movie) {
         return null;
       }
@@ -50,6 +50,12 @@ export function MovieDet() {
                         <Stars number={parseInt(vote_average)} />
                     }
                 </div>
+            </div>
+            <div className="comments">
+                    <h1>Comments:</h1>
+                    <div>
+                    <Comments/>
+                    </div>
             </div>
         </>
     )
