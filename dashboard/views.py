@@ -6,38 +6,11 @@ Imports
 from django.shortcuts import render
 from django.views import generic, View
 from rest_framework import routers, serializers, viewsets
-from rest_framework import routers
+from django.http import JsonResponse
 # Internal
-from .models import Comment
+from serializer.serializer import CommentViewSet
+from . import models
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-# Serializers define the API representation.
-class CommentSerializer(serializers.ModelSerializer):
-    """
-    A class TO serialize the models into json file
-    """
-    class Meta:
-        model = Comment
-        fields = [
-            'id',
-            'ref',
-            'author',
-            'email',
-            'body',
-            'created_on'
-        ]
-
-
-# ViewSets define the view behavior.
-class CommentViewSet(viewsets.ModelViewSet):
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
-
-
-# Routers provide an easy way of automatically determining the URL conf.
-router = routers.DefaultRouter()
-router.register(r'Comments', CommentViewSet)
 
 
 class DashBoard(View):
@@ -74,3 +47,24 @@ class DashVideo(View):
             template,
             context
         )
+
+
+def comments(request,  referece):
+    """
+    Import Comments and filter by film reference
+    """
+    filtered_comments = models.Comment.objects.filter(ref=referece)
+    data = []
+    for comment in filtered_comments:
+        data.append({
+            "author": comment.author,
+            "content": comment.body,
+            "created_on": comment.created_on,
+            # Add other properties here as needed
+        })
+    return JsonResponse(data, safe=False)
+
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'Comments', CommentViewSet)

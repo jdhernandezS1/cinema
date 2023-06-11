@@ -88,7 +88,7 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','http://127.0.0.1:8000']
 
 ROOT_URLCONF = 'back.urls'
 DIRS = [
-    os.path.join(BASE_DIR, 'static/front/build'),
+    os.path.join(BASE_DIR, 'front/build'),
     os.path.join(BASE_DIR, 'templates'),
 ]
 TEMPLATES = [
@@ -185,7 +185,7 @@ else:
     STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/front/build/static'),
+    os.path.join(BASE_DIR, 'front/build/static'),
     os.path.join(BASE_DIR, 'static/')
 ]
 MEDIA_URL = '/mediafiles/'

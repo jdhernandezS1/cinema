@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.views.generic.base import TemplateView
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Internal
-from .  import models
+from . import models
 from . import views
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -24,6 +24,11 @@ urlpatterns = [
     path(
         'router/',
         include(views.router.urls)
+        ),
+    path(
+        'comments/<int:referece>',
+        views.comments,
+        name='send_json'
         ),
     path(
         # Api Manager Url , login as user or logut links

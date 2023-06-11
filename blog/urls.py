@@ -11,23 +11,8 @@ from . import views
 
 urlpatterns = [
     path(
-        "auth0/",
+        "Blog/Posts",
         views.index,
         name="index"
-        ),
-    path(
-        "login/",
-        views.login,
-        name="login"
-        ),
-    path(
-        "logout/",
-        views.logout,
-        name="logout"
-        ),
-    path(
-        "callback/",
-        views.callback,
-        name="callback"
         ),
 ]

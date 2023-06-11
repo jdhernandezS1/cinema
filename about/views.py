@@ -21,26 +21,23 @@ class about(View):
         """
         about page view
         """
-        template =  "index.html"
-        context = {
-            'csrfToken': get_token(request)
-            }
+        template = "index.html"
         return render(
             request,
             template,
-            context
+            # context
             )
+
     @csrf_exempt
     def post(self, request, *args, **kwargs):
         """
         POST Function
         """
-        context = {
-            'csrfToken': get_token(request)
-            }
-        template =  "index.html"
+        template = "index.html"
+        data = request.POST
+        print(data)
         return render(
             request,
             template,
-            context,
+            # context,
             )

@@ -1,0 +1,42 @@
+.videoCard{
+    text-align: center;
+    margin: 50px 0;
+}
+.strongText{
+    color: #ddff46;
+}
+.description{
+    margin: auto;
+    width: 500px;
+}
+.videoTitle{
+    font-size: 2rem;
+}
+.comments{
+    width: 500px;
+    margin: auto;
+}
+.comment{
+    margin: 100px;
+    color: aquamarine;    
+    text-align: justify;
+}
+comments_title{
+    margin: auto;
+
+}
+comments_content{
+    margin: auto;
+
+}
+@media (max-width: 500px) {
+    .description{
+        margin: 10px;
+        width: auto;
+    }
+    .comments{
+        width: 10px;
+        width: auto;
+    }
+    }
+
